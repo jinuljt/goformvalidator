@@ -10,6 +10,8 @@ schema与go-validator的用法见他们各自的文档
 
 简单用法：
 ```
+//!!IMPORTANT!!
+//因为go-validator的bug，validate tag必须要放在最前面,否则validate是无效的
 type Person struct {
     Name string `validate:"min=5,max=10" schema:name"` //姓名长度 5-10个字节
     Age int `validate:"min=1,max=150" schema:age"` //年龄1-150岁
