@@ -3,6 +3,7 @@
 go form validator 其实只有一个函数，混合使用schema与validator来做golang的表单验证
 
 [schema](https://github.com/gorilla/schema) 将 net/url.Values 转换为struct，
+
 [go-validator](https://github.com/go-validator/validator) 校验数据
 
 schema与go-validator的用法见他们各自的文档
