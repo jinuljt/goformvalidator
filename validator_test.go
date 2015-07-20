@@ -18,8 +18,13 @@ func TestP1(t *testing.T) {
 		"age":  {"999"},
 	}
 
-	person := new(P1)
-	if err := Validate(person, values); err != nil {
-		t.Errorf("%v validate error due to %s", *person, err)
+	p1 := new(P1)
+	if err := Validate(p1, values); err != nil {
+		t.Errorf("%v validate error due to %s", *p1, err)
+	}
+
+	p2 := new(P2)
+	if err := Validate(p2, values); err == nil {
+		t.Errorf("%v validate should error", *p2)
 	}
 }
